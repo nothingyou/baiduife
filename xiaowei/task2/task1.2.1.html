@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #navgation {
+            width: 100%;
+            height: 74px;
+            background: #333333;
+            border: 1px solid #333;
+        }
+
+        footer {
+            width: 100%;
+            height: 74px;
+            background: #333333;
+            border: 1px solid #333;
+            text-align: center;
+            margin-top: -16px;
+        }
+        /* .box{
+            display: flex;
+        } */
+/* 侧边栏 */
+         /* aside{
+             width: 200px;
+              float: right;       
+        } */
+        main {
+            width: 100%;
+            background: #dedede;
+            border: 1px solid #dedede;
+        }
+       
+        footer p {
+            line-height: 74px;
+            color: white;
+        }
+
+        .logo {
+            float: left;
+            width: 200px;
+            height: 74px;
+        }
+
+        .logo img {
+            margin: 4px 20px;
+        }
+
+        .nav1 {
+            margin: 0;
+            width: 400px;
+            height: 74px;
+            text-align: center;
+            float: right;
+        }
+
+        .nav {
+            margin: 0;
+            list-style-type: none;
+            line-height: 74px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .nav a {
+            color: white;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .article {
+            /* width: 100%; */
+            height: auto;
+            margin: 20px 20px 0 20px;
+            padding: 20px;
+            background: white;
+            text-indent: 25px;
+            box-shadow: 2px 2px 3px #aaa;
+        }
+
+        .article h3,
+        p span {
+            color: #787677;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .article .img {
+            margin: 20px;
+            width: 720px;
+            border: 1px solid #333;
+        }
+
+        .article4 ol li {
+            text-indent: 0;
+            list-style-type: decimal;
+        }
+
+        .myTable {
+            border-collapse: collapse;
+            width: 1200px;
+        }
+
+        .myTable tr td,
+        th {
+            border: 1px solid #CCC;
+            text-align: center;
+        }
+
+        .myTable th {
+            background: #333;
+            color: white;
+            font-family: "微软雅黑";
+        }
+
+        .myTable tr:last-child {
+            background: #bbb;
+        }
+        .urser {
+            /* width: 1200px; */
+            height: auto;
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            /* text-align: center; */
+        }
+
+        .urser h1 {
+            display: block;
+            width: 540px;
+            height: 47px;
+            text-align: center;
+            border-left: 3px solid #ccc;
+        }
+
+        .left {
+            width: 500px;
+            text-align: right;
+            /* width: 200px; */
+            /* background: lawngreen; */
+        }
+
+        .text-input {
+            border: 1px solid #ccc;
+        }
+
+        .text-tip {
+            color: #ccc;
+            font-size: 12px;
+        }
+
+        .urser form #commit {
+            display: block;
+            width: 1000px;
+            height: 40px;
+            background: #3355d0;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navgation">
+        <!-- <h1>网站一级标题</h1> -->
+        <div class="logo">
+            <img src="e:/photo/百度推荐.png" alt="百度logo">
+        </div>
+        <!-- <div class="logo"><span class="baidu">百度推荐</span></div> -->
+        <ul class="nav1">
+            <li class="nav">
+                <a href="#">这是导航1</a>
+            </li>
+            <li class="nav">
+                <a href="#">这是导航2</a>
+            </li>
+            <li class="nav">
+                <a href="#">这是导航3</a>
+            </li>
+            <li class="nav">
+                <a href="#">这是导航4</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="article article1">
+            <h2>文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p>
+                <span>文章作者</span>
+                <span>文章发表时间</span>
+            </p>
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落, 换行了
+                <br> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br> 这是一个很长很长的段落， 这是一个很长很长的段落， 这是一个很长很长的段落，
+                <b>这几个字加粗了</b>换行了
+                <br> 这是一个很长很长的段落， 这是一个很长很长的段落， 这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有个链接，连接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br>
+            </p>
+
+            <img src="http://jijiantemp.oss-cn-beijing.aliyuncs.com/18-4-2/79563928.jpg" alt="图片">
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落, 换行了
+                <br> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br> 这是一个很长很长的段落， 这是一个很长很长的段落， 这是一个很长很长的段落，
+                <b>这几个字加粗了</b>换行了
+                <br> 这是一个很长很长的段落， 这是一个很长很长的段落， 这是一个很长很长的段落，
+                <a href="http://ife.baidu.com" target="_blank">这里有个链接,打开后会在新窗口连接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br>
+            </p>
+        </div>
+        <div class="article">
+            <h2>另一篇文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <p>
+                <span>文章作者</span>
+                <span>文章发表时间</span>
+            </p>
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落, 换行了
+                <br> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+                <br> 这是一个很长很长的段落， 这是一个很长很长的段落， 这是一个很长很长的段落，
+                <b>这几个字加粗了</b>换行了
+                <br> 这是一个很长很长的段落， 这是一个很长很长的段落， 这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有个链接，连接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，
+                <br> 这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                <br>
+            </p>
+
+            <img src="http://jijiantemp.oss-cn-beijing.aliyuncs.com/18-4-2/79563928.jpg" alt="图片">
+            <ul>
+                <li>列表项目1</li>
+                <li>列表项目2</li>
+                <li>列表项目3</li>
+                <li>列表项目4</li>
+            </ul>
+        </div>
+        <div class="article">
+            <h1>图片</h1>
+            <ul style="list-style-type:none">
+                <li class="img">
+                    <p>好看的图片</p>
+                    <img src="http://jijiantemp.oss-cn-beijing.aliyuncs.com/18-4-2/79563928.jpg" alt="">
+                </li>
+                <li class="img">
+                    <p>好看的图片</p>
+                    <img src="http://jijiantemp.oss-cn-beijing.aliyuncs.com/18-4-2/79563928.jpg" alt="">
+                </li>
+                <li class="img">
+                    <p>好看的图片</p>
+                    <img src="http://jijiantemp.oss-cn-beijing.aliyuncs.com/18-4-2/79563928.jpg" alt="">
+                </li>
+                <li class="img">
+                    <p>好看的图片</p>
+                    <img src="http://jijiantemp.oss-cn-beijing.aliyuncs.com/18-4-2/79563928.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="article article4">
+            <h1>这是最后一篇文章的一级标题</h1>
+            <h2>文章的二级标题</h2>
+            <p>
+                <span>文章作者</span>
+                <span>文章发表时间</span>
+            </p>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+                <li>排名4</li>
+            </ol>
+            <p>下面是一个表格</p>
+            <table border="0" class="myTable">
+                <caption>这是一个标题</caption>
+                <tr>
+                    <th>表头</th>
+                    <th>表头</th>
+                    <th>表头</th>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td>
+                        <a href="#">操作</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td>
+                        <a href="#">操作</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td>
+                        <a href="#">操作</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>总计</td>
+                    <td colspan="2">10000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="urser">
+            <h1>这里以后是一个侧栏,这是侧栏的标题</h1>
+            <form action="MAILTO:someone@w3school.com.cn" method="POST" enctype="text/plain">
+                <table>
+                    <!-- //邮箱 -->
+                    <tr>
+                        <td class="left">
+                            <label for="email">请输入邮箱地址：</label>
+                        </td>
+                        <td>
+                            <input type="email" name="" class="text-input" id="email" value="这是一个文本输入框">
+                        </td>
+                    </tr>
+                    <!-- 邮箱格式提示 -->
+                    <tr>
+                        <td class="left" align="right"></td>
+                        <td>
+                            <p class="text-tip">邮箱地址请按要求格式输入</p>
+                        </td>
+                    </tr>
+                    <!-- 输入密码 -->
+                    <tr>
+                        <td class="left" align="right">
+                            <label for="password">请输入密码：</label>
+                        </td>
+                        <td>
+                            <input type="password" class="text-input" name="" id="password" value="这是一个文本输入框">
+                        </td>
+                    </tr>
+                    <!-- 确认密码 -->
+                    <tr>
+                        <td class="left" align="right">
+                            <label for="password2">请输入重复密码：</label>
+                        </td>
+                        <td>
+                            <input type="password" class="text-input" name="" id="password2" value="这是一个文本输入框">
+                        </td>
+                    </tr>
+                    <!-- 密码格式提醒 -->
+                    <tr>
+                        <td class="left" align="right"></td>
+                        <td>
+                            <p class="text-tip">密码请为6-16位数字或字母</p>
+                        </td>
+                    </tr>
+                    <!-- 性别 -->
+                    <tr>
+                        <td class="left" align="right">
+                            <label for="sex">性别：</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="sex" id="" value="men" checked="checked">男
+                            <input type="radio" name="sex" id="" value="women">女
+                        </td>
+                    </tr>
+                    <!-- 城市 -->
+                    <tr>
+                        <td class="left" align="right">
+                            <label for="city">城市：</label>
+                        </td>
+                        <td>
+                            <select name="city" class="text-input" id="">
+                                <option value="beijing">北京</option>
+                                <option value="tianjin">天津</option>
+                                <option value="shanghai">上海</option>
+                                <option value="shenzhen">深圳</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- 爱好 -->
+                    <tr>
+                        <td class="left" align="right">
+                            <label for="aihao">爱好：</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="aihao" id="">运动
+                            <input type="checkbox" name="aihao" id="">艺术
+                            <input type="checkbox" name="aihao" id="">科学
+                            <td>
+                    </tr>
+                    <!-- 个人描述 -->
+                    <tr>
+                        <td class="left" align="right">
+                            <label for="geren">个人描述：</label>
+                        </td>
+                        <td>
+                            <textarea name="" class="text-input" id="geren" cols="60" rows="3"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" id="commit" value="确认提交">
+    
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>版权所有&copy;</p>
+    </footer>
+</body>
+
+</html>
