@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header id="shouye">
+            <nav>
+                <div class="nav-logo">
+                    <img src="img/top_logo.png" alt="logo">
+                    <span>新世界</span>
+                </div>
+                <div class="nav-login">
+                    <img src="img/login.png" alt="login">
+                    <a href="#">登录</a>
+                </div>
+                <div class="nav-text">
+                    <a href="#shouye"><label for="shouye">首页</label></a>
+                    <a href="#new"><label for="new">最新活动</label></a>
+                    <a href="#object"><label for="object">项目介绍</label></a>
+                    <a href="#community"><label for="community">爱心社区</label></a>
+                    <a href="#us"><label for="us">关于我们</label></a>
+                </div>
+            </nav>
+            <div class="top-b">
+                <img src="img/picNo1.png" alt="首页大图">
+                <div class="img-cover"></div>
+                <div class="top-b-text">
+                    <h1>Time of new life</h1>
+                    <p>新时代，年轻的人们让我们一起</p>
+                    <p>体验新生活，享受新生活</p>
+                </div>
+                <div class="top-b-button">
+                    <a href="#">开始体验</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main-a">
+                <div class="main-a-1">
+                    <img src="img/middle-1.png" alt="世界观">
+                    <div class="main-a-text">
+                        <p>打造全新世界观，让你更</p>
+                        <p>爱你的生活</p>
+                    </div>
+                </div>
+                <div class="main-a-2">
+                    <img src="img/middle-2.png" alt="公益活动">
+                    <div class="main-a-text">
+                        <p>丰富多彩的公益活动，发</p>
+                        <p>挥新世界的主人公意识</p>
+                    </div>
+
+                </div>
+                <div class="main-a-3">
+                    <img src="img/middle-3.png" alt="时尚理念">
+                    <div class="main-a-text">
+                        <p>时尚的新理念，超前体验</p>
+                        <p>未知的生活</p>
+                    </div>
+                </div>
+                <div class="main-a-4">
+                    <img src="img/middle-4.png" alt="培养机制">
+                    <div class="main-a-text">
+                        <p>完善的培养机制，培养你</p>
+                        <p>全新的世界观</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-b" id="new">
+                <img src="img/main-b.png" alt="新世界logo">
+                <h1>关于新世界，你不知道的还有什么？</h1>
+            </div>
+            <div class="main-c">
+                <div class="img-cover"></div>
+                <div class="main-c-text">
+                    <h1>查找新世界城市活动信息</h1>
+                    <div class="main-c-row"></div>
+                    <p>每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+                    <form action="#" method="GET">
+                        <ul class="form-select" onclick="optionClick()">
+                            <li>
+                                <div>
+                                    <label for="form-select-country">国家</label>
+                                </div>
+                                <input type="radio" id="form-select-country" name="country">
+                                <ul class="form-dropDown">
+                                    <input type="radio" id="country-choice1" name="country" value="china">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="country-choice1">中国</label>
+                                    </li>
+                                    <input type="radio" id="country-choice1" name="country" value="usa">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="country-choice1">美国</label>
+                                    </li>
+                                    <input type="radio" id="country-choice1" name="country" value="us">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="country-choice1">英国</label>
+                                    </li>
+                                    <input type="radio" id="country-choice1" name="country" value="australia">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="country-choice1">澳大利亚</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="form-select-province">省份</label>
+                                </div>
+                                <input type="radio" id="form-select-province" name="country">
+
+                                <ul class="form-dropDown">
+                                    <input type="radio" id="province-choice1" name="province" value="beijing">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="province-choice1">北京市</label>
+                                    </li>
+                                    <input type="radio" id="province-choice2" name="province" value="tianjin">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="province-choice2">天津市</label>
+                                    </li>
+                                    <input type="radio" id="province-choice2" name="province" value="hebei">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="province-choice3">河北省</label>
+                                    </li>
+                                    <input type="radio" id="province-choice3" name="province" value="shanxi">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="province-choice4">陕西省</label>
+                                    </li>
+                                    <input type="radio" id="province-choice4" name="province" value="neimenggu">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="province-choice4">内蒙古自治区</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="form-select-city">城市</label>
+                                </div>
+                                <input type="radio" id="form-select-city" name="country">
+
+                                <ul class="form-dropDown">
+                                    <input type="radio" id="city-choice1" name="city" value="shijiazhuang">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="city-choice1">石家庄市</label>
+                                    </li>
+                                    <input type="radio" id="city-choice2" name="city" value="xian">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="city-choice2">西安市</label>
+                                    </li>
+                                    <input type="radio" id="city-choice3" name="city" value="baoji">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="city-choice3">宝鸡市</label>
+                                    </li>
+                                    <input type="radio" id="city-choice4" name="city" value="lvliang">
+                                    <li>
+                                        <span>√</span>
+                                        <label for="city-choice3">吕梁市</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <input type="button" value="搜      索">
+                    </form>
+                </div>
+            </div>
+            <div class="main-d">
+                <div class="main-d-pic1">
+                    <div class="main-d-pic-bg"></div>
+                    <p>北京活动</p>
+                    <p>新社区大联盟</p>
+                </div>
+                <div class="main-d-pic2">
+                    <p>上海活动</p>
+                    <p>夜上海新景观探索</p>
+                    <div class="main-d-pic-bg"></div>
+                </div>
+                <div class="main-d-pic3">
+                    <div class="main-d-pic-bg"></div>
+                    <p>深圳活动</p>
+                    <p>全新海岸线观点站</p>
+                </div>
+                <div class="main-d-pic4">
+                    <div class="main-d-pic-bg"></div>
+                    <p>香港活动</p>
+                    <p>奢侈消费大派送</p>
+                </div>
+            </div>
+            <div class="main-e" id="object">
+                <div class="main-e-text">
+                    <h1>新世界</h1>
+                    <h2>TIME</h2>
+                    <span>@新世界-北京</span>
+                    <span>2016.04.01</span>
+                </div>
+                <div class="main-e-cover">
+                    <div class="main-e-cover-triangle"></div>
+                    <div class="main-e-cover-text">
+                        <div class="main-e-cover-text-1">
+                            <h1>新世界/
+                                <span>01</span>
+                            </h1>
+                            <p>新世界是个新世界新世界是个新世界新世界是个新世界</p>
+                            <p>新世界是个新世界新世界是个新世界新世界是个新世界</p>
+                            <p>新世界是个新世界新世界是个新世界新世界是个新世界</p>
+                            <p>新世界是个新世界新世界是个新世界</p>
+                            <div class="main-e-cover-text-button">更多详情</div>
+                        </div>
+                        <div class="main-e-cover-text-tab">
+                            <div class="dic active"></div>
+                            <div class="dic"></div>
+                            <div class="dic"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-f">
+                <div class="main-f-left">
+                    <h1>新时代</h1>
+                    <h1>关于爱生活的我们</h1>
+                    <div class="main-f-row"></div>
+                    <div class="main-f-button">查看更多</div>
+                </div>
+                <div class="main-f-middle">
+                    <h1>新时代</h1>
+                    <h1>关于爱生活的我们</h1>
+                    <div class="main-f-row"></div>
+                    <div class="main-f-button">查看更多</div>
+                    <div class="main-f-triangle"></div>
+                </div>
+                <div class="main-f-right"></div>
+            </div>
+            <div class="main-form" id="community">
+                <h1>成为我们的志愿者</h1>
+                <div class="main-form-row"></div>
+                <p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情 </p>
+                <p>那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+                <form action="">
+                    <div class="form-top">
+                        <div class="form-top-text text">
+                            <h1>新世界志愿者协议</h1>
+                            <p>加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则</p>
+                            <div class="more">∨ more</div>
+                        </div>
+                        <div class="form-top-input form-input">
+                            <div class="top1">
+                                    <div class="form-top-input-name">姓名：<input type="text" value=""></div>
+                                    <div class="form-top-input-name">年龄：<input type="text" value=""></div>
+                            </div>
+                            <div class="top2">
+                                    <div class="form-top-input-name">联系方式：<input type="tel" value=""></div>
+                                    <div class="form-top-input-name">联系地址：<input type="text" value=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-middle"> 
+                        <div class="form-middle-text text">
+                                <h1>新世界志愿者权利</h1>
+                                <p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格</p>
+                                <div class="more">∨ more</div>
+                        </div>
+                        <div class="form-middle-input form-input">
+                               <p>请简单描述您梦想的生活：</p> 
+                            <textarea name="dream" id="" value=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="form-bottom-text text">
+                            <h1>更多条款</h1>
+                            <div class="more">∨ more</div>
+                        </div>
+                        <div class="form-bottom-input form-input">
+                            <input type="submit" value="提交申请">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer id="us">
+            <div class="footer-a">
+                <div class="footer-a-text">
+                    <h1>联系我们</h1>
+                    <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯</p>
+                    <p>也可以通过以下任何方式关注我们动态</p>
+                    <div class="footer-a-email">
+                        <input type="email" value="someone@email.com">
+                        <div>提交</div>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="img/icon1.png" alt="腾讯">
+                    <img src="img/icon2.png" alt="微博">
+                    <img src="img/icon3.png" alt="推特">
+                    <img src="img/icon4.png" alt="互联网">
+                </div>
+            </div>
+            <div class="footer-b">
+                <span>@2016新世界</span>
+                <span><label for="shouye">Back to top</label></span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
