@@ -16,6 +16,6 @@
 
 * [任务七：实现常见的技术产品官网的页面架构及样式布局](http://htmlpreview.github.io/?https://github.com/nothingyou/baiduife/blob/master/xiaowei/task7/task1.7.1.html)
 
-* [任务八：响应式网格（栅格化）布局](http://htmlpreview.github.io/?https://github.com/nothingyou/baiduife/blob/master/xiaowei/task8/task8.html)
+* [任务八：响应式网格（栅格化）布局](https://nothingyou.github.io/baiduife/xiaowei/task8/task8.html)
 
   ​
