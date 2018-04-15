@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+/* 导航栏 */
+header{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: #2189bf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 导航栏logo */
+header .header-left{
+    position: relative;
+    margin-left: 51px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 1px;
+}
+header .header-left div{
+position: absolute;
+right: 0;
+bottom: 0;
+width: 16px;
+height: 16px;
+background: #fff;
+border-radius: 1px;
+border-top: 2px solid #2189bf;
+border-left: 2px solid #2189bf;
+}
+/* 搜索框 */
+header .header-right .search{
+    width: 313px;
+    height: 28px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    outline: none;
+    border-radius: 14px;
+    margin-right: 21px;
+}
+header .header-right .search div{
+    margin:0 18px; 
+    width: 20px;
+    background: #fff url(img/搜索.png) no-repeat center;
+    outline: none;
+}
+header .header-right .search input{
+    outline: none;
+    border-radius: 14px;
+    flex: 1;
+}
+/* 登录 */
+header .header-right{
+    display: flex;
+    margin-right: 94px;
+}
+header .header-right .login{
+    width: 55px;
+    background: transparent url(img/登录用户名.png) no-repeat left;
+    font: 12px/28px 黑体;
+    color: #fff;
+    text-align: right;
+}
+/* 侧边栏 */
+main{
+    margin: 55px auto;
+}
+main aside{
+    width: 261px;
+    height: 1213px;
+    background: #2a2e3d;
+    overflow: hidden;
+}
+/* 用户头像 */
+main aside .aside-user{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+main aside .aside-user .aside-user-pic-bg{
+    width: 60px;
+    height: 60px;
+    background: #b9babe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px 19px 0 46px;
+}
+main aside .aside-user .aside-user-pic{
+    width: 57px;
+    height: 57px;
+    background: #b9babe url(img/clay-banks-271095-unsplash.jpg) no-repeat right;
+    background-size: 55px 55px;
+    border: 3px solid #2a2e3d;
+    border-radius: 50%;
+}
+main aside .aside-user .aside-user-name{
+    font: 16px/60px 黑体;
+    color: #fff;
+}
+/* 用户数据 */
+main aside .aside-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 86px 0 63px;
+}
+main aside .aside-data .aside-data-col{
+    width: 2px;
+    height: 29px;
+    background: #313545;
+}
+main aside .aside-data div{
+    display: flex;
+    flex-direction: column;
+    font: 12px 宋体 bold;
+    color: #6e8095;
+}
+/* 个人报表 */
+aside .aside-object{
+    margin-top: 23px;
+}
+aside .aside-object>*:hover{
+    background: #383d4e;
+}
+aside .aside-object .aside-object-personalReport{
+    padding-left: 46px;
+}
+aside .aside-object .aside-object-personalReport a{
+    font: 12px 黑体;
+    color: #6e8095;
+    text-decoration: none;
+}
+.aside-object .aside-object-personalReport>div{
+    background: url(img/icon1.png) no-repeat left;
+    padding-left: 28px;
+}
+.aside-object .aside-object-personalReport>div a:visited{
+    color: #fff;
+}
+.aside-object .aside-object-personalReport li{
+    margin-top: 10px;
+}
+.aside-object .aside-object-personalReport>li{
+    margin-left: 25px;
+    background: url(img/右箭头.png) no-repeat top left;
+    background-position-y: 3px;
+    padding-left: 20px;
+}
+.aside-object .aside-object-personalReport>li>div{
+    background: url(img/file2.png) no-repeat;
+    background-position: center left;
+    padding-left: 14px;
+}
+.aside-object .aside-object-personalReport>li>ul{
+    margin-left: 14px;
+}
+.aside-object .aside-object-personalReport>li>ul>li{
+    background: url(img/file3.png) no-repeat left;
+    background-position-y: 7px;
+    padding-left: 14px;
+}
+/* 剩余项目 */
+.aside-object>div{
+    padding-left: 46px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font: 12px 黑体;
+    color: #6e8095;
+}
+.aside-object .collection div{
+    background: url(img/collection.png) no-repeat left;
+    padding-left: 28px;
+}
+/* 文件展示部分 */
+main{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+}
+main .main{
+    width: 20px;
+    flex: 1;
+    background: #eeeeed;
+}
+/* 顶栏 */
+main .main .main-top{
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    padding-left: 30px;
+}
+main .main .main-top span{
+    font: 12px/30px 黑体;
+    color: #aaa;
+}
+main .main .main-top div span:last-child span{
+    color: #99b7d3;
+}
+/* 主体 */
+main .main .main-bottom{
+    padding: 9px 70px 0 60px;
+}
+main .main .main-bottom>div{
+    margin-top: 10px;
+    background: #fff;
+}
+main .main .main-bottom .bottom-a{
+    height: 86px;
+    padding:0 112px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .main .main-bottom .bottom-a>div{
+    height: 58px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+}
+/* select通用样式 */
+.main .main-bottom .bottom-a .select{
+    display: flex;
+    justify-content: space-between;
+}
+.main-bottom .bottom-a .select span{
+    font: 12px/26px 黑体;
+    color: #aaa;
+}
+.main-bottom .bottom-a .select>div{
+    position: relative;
+    width: 71px;
+    height: 26px;
+    outline:1px solid #ccc;
+}
+.main-bottom .bottom-a .select>div .down{
+    position: absolute;
+    height: 26px;
+    width: 20px;
+    top: 0;
+    right: 3px;
+    background: url(img/下箭头.png) no-repeat center right;;
+}
+.main-bottom .bottom-a .select select{
+    /* flex: 1; */
+    width: 100%;
+    height: 26px;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font: 12px 黑体;
+    color: #323333;
+    padding-left:10px ;
+}
+/* 查询项 */
+.main .main-bottom .bottom-a .a-select-a{
+    width: 123px;
+}
+/* 卖方买方 */
+.main .main-bottom .bottom-a .a-select-b .change{
+    background: url(img/交换.png) no-repeat center right;
+    width: 28px;
+    height: 38px;
+}
+.main .main-bottom .bottom-a .a-select-b{
+    width: 187px;
+    background: url(img/交换.png) no-repeat center right;
+    padding-right: 28px;
+}
+.main .main-bottom .bottom-a .a-select-b .a-select-1,
+.main .main-bottom .bottom-a .a-select-b .a-select-2{
+    width: 159px;
+}
+.main .main-bottom .bottom-a .a-select-b .select>div{
+    width: 121px;
+}
+/* 日期，耗时，人数 */
+.main .main-bottom .bottom-a .a-select-c{
+    width: 292px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-1{
+    width: 159px;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-1 div{
+    width: 120px;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-1 input{
+    width: 100%;
+    -webkit-appearance: none;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-2{
+    width: 116px;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-3{
+    width: 111px;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-4{
+    width: 169px;
+}
+.main .main-bottom .bottom-a .a-select-c .a-select-4>div{
+    width: 120px;
+}
+/* 搜索按钮 */
+.main .main-bottom .bottom-a .a-select-button{
+    width: 51px;
+    height: 26px;
+    background: #388ac1;
+    font: 12px/26px 黑体;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+}
+main .main .main-bottom .bottom-b{
+    height: 65px;
+}
+.main .main-bottom .bottom-c>div{
+    margin-top: 10px;
+    background: #ccc;
+}
+.main .main-bottom .bottom-c .bottom-c-1{
+    height: 71px;
+}
+.main .main-bottom .bottom-c .bottom-c-2{
+    height: 357px;
+}
+.main .main-bottom .bottom-c .bottom-c-3{
+    height: 357px;
+}
