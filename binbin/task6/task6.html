@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>模拟队列</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="main.js"></script> -->
+    <style>
+        .container .top {
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .container .top * {
+            outline: none;
+        }
+
+        .container .top #text {
+            width: 100%;
+            height: 100px;
+        }
+
+        .container .top div {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #search {
+            flex: 1;
+        }
+
+        .container .top .button {
+            /* width: 30px; */
+            border-radius: 5px;
+            background: #fff;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .container #bottom {
+            padding-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container #bottom div {
+            margin: 5px 5px;
+            padding: 0 10px;
+            /* width: 30px; */
+            /* height: 30px; */
+            color: #b49494;
+            background: #fff;
+            border: 1px solid #aaa;
+            text-align: center;
+            font: 16px/30px 幼圆;
+        }
+        .container #bottom div .found{
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <textarea name="" id="text"></textarea>
+            <div>
+                <input id="button1" class="button" type="button" value="左侧入">
+                <input id="button2" class="button" type="button" value="右侧入">
+                <input id="button3" class="button" type="button" value="左侧出">
+                <input id="button4" class="button" type="button" value="右侧出">
+
+            </div>
+            <div>
+                <input id="search" type="text">
+                <input id="button5" class="button" type="button" value="查询">
+            </div>
+        </div>
+        <div id="bottom">
+
+        </div>
+    </div>
+    <script>
+        (function () {
+            var button = document.getElementsByClassName("button");
+            var bottom = document.getElementById("bottom");
+            var text = document.getElementById("text");
+            var search = document.getElementById("search");
+            //   插入队头元素
+            button[0].addEventListener("click", btn0Handle);
+            //   插入队尾元素
+            button[1].addEventListener("click", btn1Handle);
+            //   删除队头节点
+            button[2].addEventListener("click", btn2Handle);
+            //   删除队尾节点
+            button[3].addEventListener("click", btn3Handle);
+            //   排序
+            button[4].addEventListener("click", btn4Handle);
+        })()
+        // 查询按钮的事件处理函数
+        function btn4Handle() {
+            var machText = search.value;
+            if(machText!=null&&machText.length>0){
+                strMach(machText);
+            }
+        }
+        // 匹配符合要求的div
+        function strMach(str) {
+            for (var ob of bottom.childNodes) {
+                if (ob.nodeType == 1) {
+                    if (ob.innerText.indexOf(str) != -1) {
+                        var index=ob.innerText.indexOf(str);
+                        var tempStr1=ob.innerText.slice(0,index);
+                        // 分离查询词前面的字符串
+                        var span1=document.createElement("span");
+                        span1.innerText=tempStr1;
+                        // 分离查询词后面的字符串
+                        var tempStr2=ob.innerText.slice(index+str.length);
+                        var span2=document.createElement("span");
+                        span2.innerText=tempStr2;
+                        // 分离查询词
+                        var span3=document.createElement("span");
+                        span3.innerText=str;
+                        span3.style.backgroundColor="black";
+                        // 合并添加到div中
+                        ob.innerText=null;
+                        ob.appendChild(span1);
+                        ob.appendChild(span3);
+                        ob.appendChild(span2);
+                        ob.style.backgroundColor = "#b49494";
+                        ob.style.color = "#fff";
+                    } else {
+                        if(ob.children.length>0){
+                            ob.children[1].style.backgroundColor="#fff";
+                        }
+                        console.log(ob.children);
+                        ob.style.backgroundColor = "#fff";
+                        ob.style.color = "#b49494";
+                    }
+                }
+            }
+        }
+        // 左侧入的事件处理函数
+        function btn0Handle() {
+            if (text.value == null || text.value == "") {
+                alert("输入为空，无法插入");
+                return 0;
+            }
+            if (bottom.children.length >= 60) {
+                aler("队列已满");
+                return 0;
+            }
+            var temp = mySplit(text.value);
+            for (var i of temp) {
+                if (i != "") {
+                    var div = document.createElement("div");
+                    div.innerText = i;
+                    text.value = null;
+                    bottom.insertBefore(div, bottom.firstChild);
+                }
+            }
+            return 1;
+        }
+        // 按任意单个符号分割字符串
+        function mySplit(str) {
+            var temp;
+            var reg = /[\,\，\、\s\r\n]/;
+            temp = str.split(reg);
+            console.log(temp);
+            return temp;
+        }
+        // 右侧入的事件处理函数
+        function btn1Handle() {
+            if (text.value == null || text.value == "") {
+                alert("输入为空，无法插入");
+                return 0;
+            }
+            if (bottom.children.length >= 60) {
+                aler("队列已满");
+                return 0;
+            }
+            var temp = mySplit(text.value);
+            for (var i of temp) {
+                if (i != "") {
+                    var div = document.createElement("div");
+                    div.innerText = i;
+                    text.value = null;
+                    bottom.appendChild(div);
+                }
+            }
+            return 1;
+        }
+        // 左侧出的事件处理函数
+        function btn2Handle() {
+            if (bottom.childNodes.length == 0) {
+                confirm("当前队列为空，无法删除");
+                return 0;
+            }
+            bottom.removeChild(bottom.firstChild);
+            return 1;
+        }
+        // 右侧出的事件处理函数
+        function btn3Handle() {
+            if (bottom.childNodes.length == 0) {
+                confirm("当前队列为空，无法删除");
+                return 0;
+            }
+            bottom.removeChild(bottom.lastChild);
+            return 1;
+        }
+    </script>
+</body>
+
+</html>

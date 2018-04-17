@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>模拟队列</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <!-- <script src="main.js"></script> -->
+  <style>
+    .container .top{
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .container .top *{
+      outline: none;
+    }
+    .container .top #text{
+      width: 200px;
+      height: 20px;
+    }
+    .container .top .button{
+      border-radius: 5px;
+      background: #fff;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+    .container #bottom{
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container #bottom div{
+      margin:0 10px; 
+      width: 30px;
+      height: 30px;
+      background: #b49494;
+      text-align: center;
+      font: 16px/30px 幼圆;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <input id="text" type="text" value="">
+      <input id="button1" class="button" type="button" value="左侧入">
+      <input id="button2" class="button" type="button" value="右侧入">
+      <input id="button3" class="button" type="button" value="左侧出">
+      <input id="button4" class="button" type="button" value="右侧出">
+    </div>
+    <div id="bottom">
+
+    </div>
+  </div>
+  <script>
+    (function(){
+      var button=document.getElementsByClassName("button");
+      var bottom=document.getElementById("bottom");
+      var text=document.getElementById("text");
+      button[0].addEventListener("click",function(){
+        if(text.value==null||text.value==""){
+          confirm("输入为空，无法插入");
+          return 0;
+        }
+        var div=document.createElement("div");
+        div.innerHTML=text.value;
+        text.value=null;
+        // console.log(bottom.insertAdjacentElement("afterbegin",div));
+        bottom.insertBefore(div,bottom.firstChild);
+        return 1;
+      });
+      button[1].addEventListener("click",function(){
+        if(text.value==null||text.value==""){
+          confirm("输入为空，无法插入");
+          return 0;
+        }
+        var div=document.createElement("div");
+        div.innerHTML=text.value;
+        text.value=null;
+        bottom.appendChild(div);
+        return 1;
+      });
+      button[2].addEventListener("click",function(){
+        if(bottom.childNodes.length==0){
+          confirm("当前队列为空，无法删除");
+          return 0;
+        }
+        bottom.removeChild(bottom.firstChild);
+        return 1;
+      });
+      button[3].addEventListener("click",function(){
+        if(bottom.childNodes.length==0){
+          confirm("当前队列为空，无法删除");
+          return 0;
+        }
+        bottom.removeChild(bottom.lastChild);
+        return 1;
+      });
+    })();
+  </script>
+</body>
+</html>
